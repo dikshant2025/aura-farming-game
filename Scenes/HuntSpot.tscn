@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmqky5nxsy7mp"]
+
+[ext_resource type="Script" uid="uid://bbkg5rmk0xvll" path="res://Scripts/HuntSpot.gd" id="1_c0q4b"]
+[ext_resource type="PackedScene" uid="uid://bshdefs4gmqub" path="res://Scenes/WildCritter.tscn" id="2_48o68"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8v51k"]
+size = Vector2(300, 180)
+
+[node name="HuntSpot" type="Area2D" groups=["HuntSpot"]]
+collision_layer = 2
+script = ExtResource("1_c0q4b")
+critter_scene = ExtResource("2_48o68")
+spawn_interval_sec = 5.0
+click_radius = 28.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8v51k")

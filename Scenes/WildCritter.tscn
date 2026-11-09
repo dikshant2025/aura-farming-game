@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bshdefs4gmqub"]
+
+[ext_resource type="Script" uid="uid://dcp2i8dxivx40" path="res://Scripts/WildCritter.gd" id="1_d0uex"]
+[ext_resource type="Texture2D" uid="uid://cf81axhm08bge" path="res://Tiles/Bull_animation_with_shadow.png" id="2_24b23"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8t33f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pii06"]
+atlas = ExtResource("2_24b23")
+region = Rect2(16, 272, 35, 33)
+
+[node name="WildCritter" type="CharacterBody2D" groups=["Critters"]]
+scale = Vector2(3, 3)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_d0uex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Critters"]]
+position = Vector2(-0.666667, -1)
+scale = Vector2(0.883893, 0.896976)
+shape = SubResource("CircleShape2D_8t33f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_pii06")

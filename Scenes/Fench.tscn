@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://br3n0a744hqgn"]
+
+[ext_resource type="Texture2D" uid="uid://hyic4p4p1alg" path="res://roguelikeSheet_transparent.png" id="1_44l2l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvacd"]
+atlas = ExtResource("1_44l2l")
+region = Rect2(629, 136, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1h7o"]
+
+[node name="Fench" type="StaticBody2D"]
+scale = Vector2(2, 2)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_nvacd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+scale = Vector2(0.887931, 0.439608)
+shape = SubResource("RectangleShape2D_u1h7o")

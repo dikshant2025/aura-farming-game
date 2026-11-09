@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://34ol6q1ohds8"]
+
+[ext_resource type="Script" uid="uid://b0d6hlaixkaa2" path="res://Scripts/SoilTile.gd" id="1_mjnst"]
+[ext_resource type="Texture2D" uid="uid://hyic4p4p1alg" path="res://roguelikeSheet_transparent.png" id="2_g6juc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgciu"]
+atlas = ExtResource("2_g6juc")
+region = Rect2(51, 323, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrjdk"]
+atlas = ExtResource("2_g6juc")
+region = Rect2(17, 493, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2sgf"]
+atlas = ExtResource("2_g6juc")
+region = Rect2(374, 187, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyxjj"]
+atlas = ExtResource("2_g6juc")
+region = Rect2(187, 136, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0qxx"]
+atlas = ExtResource("2_g6juc")
+region = Rect2(425, 187, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2r3dl"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgciu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrjdk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2sgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vyxjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0qxx")
+}],
+"loop": true,
+"name": &"Soil",
+"speed": 0.0
+}]
+
+[node name="SoilTile" type="Node2D"]
+script = ExtResource("1_mjnst")
+
+[node name="Spr" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2r3dl")
+animation = &"Soil"
+speed_scale = 0.0

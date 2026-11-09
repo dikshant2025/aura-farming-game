@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cswbwgc0vuep6"]
+
+[ext_resource type="Script" uid="uid://dvbk4xiqw3esr" path="res://Scripts/TreeSpot.gd" id="1_gf4ak"]
+[ext_resource type="PackedScene" uid="uid://c3mt43ip1pkn8" path="res://Scenes/Tree.tscn" id="2_wtytq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hw2fh"]
+
+[node name="TreeSpot" type="Area2D" groups=["TreeSpot"]]
+script = ExtResource("1_gf4ak")
+tree_scene = ExtResource("2_wtytq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hw2fh")

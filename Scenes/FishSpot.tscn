@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://lgj8seflduc4"]
+
+[ext_resource type="Script" uid="uid://dw0gvotfr3u2y" path="res://Scripts/FishSpot.gd" id="1_4oeqq"]
+[ext_resource type="PackedScene" uid="uid://coms1pf4bq1wp" path="res://Scenes/Fish.tscn" id="2_2tfp8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dwmb"]
+
+[node name="FishSpot" type="Area2D" groups=["FishSpot"]]
+collision_layer = 2
+script = ExtResource("1_4oeqq")
+fish_scene = ExtResource("2_2tfp8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4dwmb")

@@ -1,0 +1,20 @@
+{
+  "turnip": {
+	"grow_days": 3,
+	"price_sell": 20,
+	"seed_cost": 10,
+	"description": "A fast-growing root vegetable."
+  },
+  "wheat": {
+	"grow_days": 5,
+	"price_sell": 30,
+	"seed_cost": 15,
+	"description": "A basic grain crop used in cooking."
+  },
+  "carrot": {
+	"grow_days": 4,
+	"price_sell": 25,
+	"seed_cost": 12,
+	"description": "A crisp orange vegetable rich in energy."
+  }
+}

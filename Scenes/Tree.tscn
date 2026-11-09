@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3mt43ip1pkn8"]
+
+[ext_resource type="Script" uid="uid://fwtklfiedqgx" path="res://Scripts/Tree.gd" id="1_itkj8"]
+[ext_resource type="Texture2D" uid="uid://hyic4p4p1alg" path="res://roguelikeSheet_transparent.png" id="2_0suky"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72j6q"]
+atlas = ExtResource("2_0suky")
+region = Rect2(255, 170, 16, 33)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fxwtr"]
+height = 32.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_itkj8"]
+
+[node name="Tree" type="StaticBody2D" groups=["Trees"]]
+scale = Vector2(0.2, 0.2)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_itkj8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_72j6q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.666666)
+scale = Vector2(0.817776, 1.04959)
+shape = SubResource("CapsuleShape2D_fxwtr")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.166667, 0.333333)
+scale = Vector2(0.437104, 0.437104)
+shape = SubResource("CapsuleShape2D_itkj8")

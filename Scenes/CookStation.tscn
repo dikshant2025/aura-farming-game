@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://2w5r2w0bvuig"]
+
+[ext_resource type="Script" uid="uid://cy3pjhrllphjs" path="res://Scripts/CookStation.gd" id="1_8t4ad"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_puvr8"]
+
+[node name="CookStation" type="Area2D" groups=["CookStation"]]
+script = ExtResource("1_8t4ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_puvr8")
